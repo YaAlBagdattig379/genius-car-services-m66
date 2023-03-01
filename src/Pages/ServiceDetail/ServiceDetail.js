@@ -11,10 +11,11 @@ const ServiceDetail = () => {
         .then(res => res.json())
         .then(data =>setService(data))
     },[])
-    // const {name,price,img}= service;
+    const {name,price,img}= service;
     return (
         <div>
-            <h1>You are about to book: {service.name} || {service.price} </h1>
+            <h1>You are about to book: {name} || {price} <img src={img} alt="" />
+            </h1>
             <div className='text-center'>
               <Link to='/checkout'>
                  <Button variant="primary">Proceed Checkout</Button>
