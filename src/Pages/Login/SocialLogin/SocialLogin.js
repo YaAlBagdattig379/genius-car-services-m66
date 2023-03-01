@@ -23,10 +23,10 @@ const SocialLogin = () => {
     useEffect(()=>{
       if (user || user1) {
         return (
-          navigate('/home')
+          navigate('/')
         );
       }
-    },[])
+    },[user || user1])
     return (
         <div>
             <div className='d-flex align-items-center'>
